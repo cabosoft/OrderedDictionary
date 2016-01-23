@@ -30,7 +30,10 @@
 //  3. This notice may not be removed or altered from any source distribution.
 //
 
+
 #import <Foundation/Foundation.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Ordered subclass of NSDictionary.
@@ -78,7 +81,7 @@
 - (void)removeObjectsForKeys:(NSArray<KeyType> *)keyArray;
 - (void)setDictionary:(NSDictionary<KeyType, ObjectType> *)otherDictionary;
 - (void)setObject:(ObjectType)object forKey:(KeyType)key;
-- (void)setObject:(ObjectType)object forKeyedSubscript:(KeyType)key;
+- (void)setObject:(nullable ObjectType)obj forKeyedSubscript:(KeyType <NSCopying>)key;
 
 /** Inserts an object at a specific index in the dictionary. */
 - (void)insertObject:(ObjectType)object forKey:(KeyType)key atIndex:(NSUInteger)index;
@@ -91,3 +94,7 @@
 - (void)removeObjectAtIndex:(NSUInteger)index;
 
 @end
+
+
+NS_ASSUME_NONNULL_END
+

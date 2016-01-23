@@ -53,22 +53,22 @@
 
 + (instancetype)dictionaryWithContentsOfFile:(NSString *)path
 {
-    return [self dictionaryWithDictionary:[NSDictionary dictionaryWithContentsOfFile:path]];
+    return [self dictionaryWithDictionary:(NSDictionary * _Nonnull)[NSDictionary dictionaryWithContentsOfFile:path]];
 }
 
 + (instancetype)dictionaryWithContentsOfURL:(NSURL *)url
 {
-    return [self dictionaryWithDictionary:[NSDictionary dictionaryWithContentsOfURL:url]];
+    return [self dictionaryWithDictionary:(NSDictionary * _Nonnull)[NSDictionary dictionaryWithContentsOfURL:url]];
 }
 
 - (instancetype)initWithContentsOfFile:(NSString *)path
 {
-    return [self initWithDictionary:[NSDictionary dictionaryWithContentsOfFile:path]];
+    return [self initWithDictionary:(NSDictionary * _Nonnull)[NSDictionary dictionaryWithContentsOfFile:path]];
 }
 
 - (instancetype)initWithContentsOfURL:(NSURL *)url
 {
-    return [self initWithDictionary:[NSDictionary dictionaryWithContentsOfURL:url]];
+    return [self initWithDictionary:(NSDictionary * _Nonnull)[NSDictionary dictionaryWithContentsOfURL:url]];
 }
 
 - (instancetype)initWithObjects:(NSArray *)objects forKeys:(NSArray *)keys
